@@ -1,0 +1,174 @@
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-size: 2.3rem;
+  line-height: 1;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h2{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -.025em;
+  font-weight: 500;
+  margin-top: 0.75rem;
+}
+
+h3{
+  margin-top: 100px;
+}
+
+p{
+  line-height: 1.5;
+  max-width: 20rem;
+  margin-top: 1rem;
+  opacity: 0.5;
+}
+
+.ContainerOne{
+  margin-top: 50px;
+  width: 90%;
+}
+
+.ContainerTwo{
+  width: 90%;
+}
+
+.Menu{
+  display: none;
+}
+
+.SocialMedia{
+  display: flex;
+  gap: 23px;
+  opacity: 0.5;
+  width: 100%;
+  margin-top: 1.7rem;
+}
+
+@media (min-width: 638px) {
+  h1{
+    font-size: 2.9rem;
+    line-height: 1;
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  h2{
+    font-size: 1.4rem;
+    line-height: 1.75rem;
+    letter-spacing: -.025em;
+    font-weight: 500;
+    margin-top: 0.75rem;
+  }
+}
+
+@media (min-width: 766px) {
+  .ContainerOne{
+    margin-top: 79px;
+    width: 88%;
+  }
+  
+  .ContainerTwo{
+    width: 88%;
+  }
+}
+
+@media (min-width: 1022px) {
+
+  h1{
+    font-size: 3rem;
+    line-height: 1;
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  h2{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: -.025em;
+    font-weight: 500;
+    margin-top: 0.75rem;
+  }
+
+  h3{
+    display: none;
+  }
+
+  p{
+    line-height: 1.5;
+    max-width: 20rem;
+    margin-top: 1rem;
+    opacity: 0.5;
+  }
+
+  .App{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ContainerOne{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .PersonalData{
+    width: 50%;
+    margin-top: 6rem;
+  }
+
+  .ContainerTwo{
+    width: 50%;
+    margin-left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Menu{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+    margin-top: 4.7rem;
+  }
+
+  .ContainerMenu a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .Line {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+  }
+
+  .SocialMedia{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 50%;
+    margin-top: 12.6rem;
+  }
+
+  .Content{
+    width: 80%;
+  }
+}
