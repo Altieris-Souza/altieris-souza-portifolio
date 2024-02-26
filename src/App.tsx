@@ -4,8 +4,48 @@ import { SlSocialInstagram } from "react-icons/sl";
 import { FaSlack } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import './App.css';
+import { useState } from "react";
+
+
 
 function App() {
+  
+  const [lineWidthSobre, setLineWidthSobre] = useState(40);
+  const [colorSobre, setColorSobre] = useState(0.9);
+  const [lineWidthExperiencias, setLineWidthExperiencias] = useState(40);
+  const [colorProjetos, setColorProjetos] = useState(0.9);
+  const [lineWidthProjetos, setLineWidthProjetos] = useState(40);
+  const [colorExp, setColoExp] = useState(0.9);
+
+  const handleMouseEnterSobre = () => {
+    setLineWidthSobre(80);
+    setColorSobre(0.9)
+  };
+  
+  const handleMouseLeaveSobre = () => {
+    setLineWidthSobre(40);
+    setColorSobre(0.3)
+  };
+
+  const handleMouseEnterExperiencias = () => {
+    setLineWidthExperiencias(80);
+    setColoExp(0.9)
+  };
+  
+  const handleMouseLeaveExperiencias = () => {
+    setLineWidthExperiencias(40);
+    setColoExp(0.3)
+  };
+
+  const handleMouseEnterProjetos = () => {
+    setLineWidthProjetos(80);
+    setColorProjetos(0.9)
+  };
+  
+  const handleMouseLeaveProjetos = () => {
+    setLineWidthProjetos(40);
+    setColorProjetos(0.3)
+  };
   return (
     <div className="App">
       <header className='ContainerOne'>
@@ -18,14 +58,14 @@ function App() {
 
 
         <div className='Menu'>
-          <div className='ContainerMenu'>
-            <a href=""><span className='Line'></span><span className='Text'>Sobre</span></a>
+          <div className='ContainerMenu' onMouseEnter={handleMouseEnterSobre} onMouseLeave={handleMouseLeaveSobre} style={{opacity: `${colorSobre}`}}>
+            <a href=""><span className='Line' style={{ width: `${lineWidthSobre}px`}}></span><span className='Text'>Sobre</span></a>
           </div>
-          <div className='ContainerMenu'>
-            <a href=""><span className='Line'></span><span className='Text'>Experiências</span></a>
+          <div className='ContainerMenu' onMouseEnter={handleMouseEnterExperiencias} onMouseLeave={handleMouseLeaveExperiencias} style={{opacity: `${colorExp}`}}>
+            <a href=""><span className='Line' style={{ width: `${lineWidthExperiencias}px` }}></span><span className='Text'>Experiências</span></a>
           </div>
-          <div className='ContainerMenu'>
-            <a href=""><span className='Line'></span><span className='Text'>Projetos</span></a>
+          <div className='ContainerMenu' onMouseEnter={handleMouseEnterProjetos} onMouseLeave={handleMouseLeaveProjetos} style={{opacity: `${colorProjetos}`}}>
+            <a href=""><span className='Line' style={{ width: `${lineWidthProjetos}px` }}></span><span className='Text'>Projetos</span></a>
           </div>
         </div>
 
