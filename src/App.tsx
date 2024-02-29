@@ -11,11 +11,11 @@ import { useState } from "react";
 function App() {
   
   const [lineWidthSobre, setLineWidthSobre] = useState(40);
-  const [colorSobre, setColorSobre] = useState(0.9);
+  const [colorSobre, setColorSobre] = useState(0.3);
   const [lineWidthExperiencias, setLineWidthExperiencias] = useState(40);
-  const [colorProjetos, setColorProjetos] = useState(0.9);
+  const [colorProjetos, setColorProjetos] = useState(0.3);
   const [lineWidthProjetos, setLineWidthProjetos] = useState(40);
-  const [colorExp, setColoExp] = useState(0.9);
+  const [colorExp, setColoExp] = useState(0.3);
 
   const handleMouseEnterSobre = () => {
     setLineWidthSobre(80);
@@ -66,6 +66,12 @@ function App() {
           </div>
           <div className='ContainerMenu' onMouseEnter={handleMouseEnterProjetos} onMouseLeave={handleMouseLeaveProjetos} style={{opacity: `${colorProjetos}`}}>
             <a href=""><span className='Line' style={{ width: `${lineWidthProjetos}px` }}></span><span className='Text'>Projetos</span></a>
+          </div>
+          <div className='ContainerMenu'>
+          <a href="" className="line">
+            <span className="info"></span>
+            <p>Sobre</p>
+          </a>
           </div>
         </div>
 

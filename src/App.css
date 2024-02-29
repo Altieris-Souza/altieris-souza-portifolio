@@ -158,13 +158,13 @@ p{
     padding: 10px;
   }
   
-  .Line {
+  /* .Line {
     display: inline-block;
     height: 2px;
     width: 30px;
     background-color: white;
     transition: width 0.3s ease;
-  }
+  } */
   
   .Text {
     margin-left: 10px;
@@ -181,4 +181,25 @@ p{
   .Content{
     width: 80%;
   }
+
+  .line {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    width: 200px;
+  }
+  
+  .info {
+    display: block;
+    width: 50px;
+    background-color: yellow;
+    height: 4px;
+    border-radius: 12px;
+    transition: 0.2s linear;
+  }
+  
+  .line:hover > .info {
+    width: 100px;
+  }
+  
 }
